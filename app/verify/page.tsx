@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function VerifyPage() {
+function VerifyPageContent() {
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
   const [message, setMessage] = useState("");
@@ -23,7 +23,7 @@ export default function VerifyPage() {
 
         if (response.ok) {
           setStatus("success");
-          setMessage("Email verified successfully! You can close this page.");
+          setMessage("Email verified successfully! You can close this window.");
         } else {
           setStatus("error");
           setMessage(data.error || "Failed to verify email");
@@ -93,5 +93,13 @@ export default function VerifyPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function VerifyPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <VerifyPageContent />
+    </Suspense>
   );
 }
