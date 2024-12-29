@@ -3,6 +3,7 @@ import connectDB from "@/lib/mongodb";
 import WaitlistUser from "@/models/WaitlistUser";
 import { verifyToken } from "@/lib/token";
 
+export const dynamic = 'force-dynamic'; 
 export async function GET(req: NextRequest) {
   try {
     const token = req.nextUrl.searchParams.get("token");
