@@ -23,7 +23,7 @@ export default function VerifyPage() {
 
         if (response.ok) {
           setStatus("success");
-          setMessage("Email verified successfully! You can close this window.");
+          setMessage("Email verified successfully! You can close this page.");
         } else {
           setStatus("error");
           setMessage(data.error || "Failed to verify email");
