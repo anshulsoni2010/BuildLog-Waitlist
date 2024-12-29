@@ -4,6 +4,7 @@ import WaitlistUser from "@/models/WaitlistUser";
 import { verifyToken } from "@/lib/token";
 
 export const dynamic = 'force-dynamic'; 
+
 export async function GET(req: NextRequest) {
   try {
     const token = req.nextUrl.searchParams.get("token");
@@ -23,6 +24,8 @@ export async function GET(req: NextRequest) {
         { status: 400 }
       );
     }
+
+    console.log("Token verified successfully, proceeding to connect to database...");
 
     await connectDB();
 
@@ -62,4 +65,4 @@ export async function GET(req: NextRequest) {
       { status: 500 }
     );
   }
-};
+}
