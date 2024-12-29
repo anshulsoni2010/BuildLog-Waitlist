@@ -1,12 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import connectDB from "@/lib/mongodb";
 import WaitlistUser from "@/models/WaitlistUser";
 import { verifyToken } from "@/lib/token";
 
-export async function GET(req: Request) {
+export async function GET(req: NextRequest) {
   try {
-    const { searchParams } = new URL(req.url);
-    const token = searchParams.get("token");
+    const token = req.nextUrl.searchParams.get("token");
 
     if (!token) {
       return NextResponse.json(
@@ -62,4 +61,4 @@ export async function GET(req: Request) {
       { status: 500 }
     );
   }
-}
+};
