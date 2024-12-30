@@ -141,7 +141,7 @@ export default function SignUpForm() {
       </div>
       {submitted && (
         <p className="text-sm text-zinc-400">
-          If you don't see the email in your inbox, please check your spam folder.
+          If you don&apos;t see the email in your inbox, please check your spam folder.
         </p>
       )}
       <div className="flex items-center justify-between gap-2 text-xs sm:gap-3 sm:text-sm">
