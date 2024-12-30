@@ -24,8 +24,18 @@ export async function sendVerificationEmail(email: string, token: string) {
         <div style="text-align: center; margin-bottom: 30px;">
           <img src="${process.env.NEXT_PUBLIC_APP_URL}/logo.png" alt="BuildLog Logo" style="width: 120px; margin-bottom: 15px;">
           <img src="${process.env.NEXT_PUBLIC_APP_URL}/preview.png" alt="BuildLog Preview" style="width: 100%; max-width: 500px; border-radius: 8px; margin-bottom: 20px;">
-          <h1 style="color: #FAFAFA; margin: 0;">Welcome to BuildLog</h1>
-          <p style="color: #71717A; margin: 10px 0;">Thank you for joining our waitlist!</p>
+          <h1 style="color: #FAFAFA; margin: 0;">You are in Early Access Waitlist</h1>
+          <p style="color: #71717A; margin: 10px 0;">I'll send you updates on new features and when you can expect to get access to BuildLog. Currently, I'm working on the app and expect to be ready very soon.</p>
+          <div style="margin-top: 20px;">
+            <p style="color: #71717A; margin: 10px 0;">Meanwhile, let's connect!</p>
+            <a href="https://twitter.com/Anshulsoni2010" 
+               style="display: inline-flex; align-items: center; background-color: #18181B; color: #FAFAFA; padding: 10px 20px; text-decoration: none; border-radius: 6px; border: 1px solid #27272A;">
+              <svg style="width: 16px; height: 16px; margin-right: 8px;" viewBox="0 0 24 24" fill="#FAFAFA">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Follow Anshul (Mind Behind BuildLog)
+            </a>
+          </div>
         </div>
         
         <div style="background-color: #18181B; padding: 20px; border-radius: 8px; margin: 20px 0;">
