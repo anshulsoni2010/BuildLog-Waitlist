@@ -1,0 +1,33 @@
+{
+  "name": "BuildLog - Organize Your Projects Effortlessly",
+  "short_name": "BuildLog",
+  "description": "BuildLog helps you organize and track your construction projects with ease. Join our waitlist to be among the first to experience streamlined project management.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18181B",
+  "theme_color": "#1F2937",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Join Waitlist",
+      "url": "/",
+      "description": "Join BuildLog Waitlist"
+    }
+  ]
+}
