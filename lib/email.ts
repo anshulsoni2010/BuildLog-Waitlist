@@ -22,7 +22,7 @@ export async function sendVerificationEmail(email: string, token: string) {
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #09090B; color: #FAFAFA; border-radius: 8px;">
         <div style="text-align: center; margin-bottom: 30px;">
-          <img src="${process.env.NEXT_PUBLIC_APP_URL}/buildlog-logo.png" alt="BuildLog Logo" style="width: 120px; margin-bottom: 15px;">
+          <img src="${process.env.NEXT_PUBLIC_APP_URL}/logo.png" alt="BuildLog Logo" style="width: 120px; margin-bottom: 15px;">
           <img src="${process.env.NEXT_PUBLIC_APP_URL}/preview.png" alt="BuildLog Preview" style="width: 100%; max-width: 500px; border-radius: 8px; margin-bottom: 20px;">
           <h1 style="color: #FAFAFA; margin: 0;">Welcome to BuildLog</h1>
           <p style="color: #71717A; margin: 10px 0;">Thank you for joining our waitlist!</p>
