@@ -38,6 +38,7 @@ export default function AdminPage() {
       }
     } catch (error) {
       console.error("Error fetching users:", error);
+      toast.error("Failed to fetch users");
     } finally {
       setLoading(false);
     }
@@ -85,6 +86,17 @@ export default function AdminPage() {
 
     // Generate Excel file
     XLSX.writeFile(wb, `waitlist-users-${new Date().toISOString().split('T')[0]}.xlsx`);
+  };
+
+  const handleRefresh = () => {
+    toast.promise(
+      fetchUsers(),
+      {
+        loading: 'Refreshing...',
+        success: 'Data refreshed successfully',
+        error: 'Failed to refresh data'
+      }
+    );
   };
 
   const filteredUsers = users.filter(user => {
@@ -156,6 +168,13 @@ export default function AdminPage() {
             <option value="verified">Verified</option>
             <option value="unverified">Unverified</option>
           </select>
+          <button
+            onClick={handleRefresh}
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            disabled={loading}
+          >
+            {loading ? 'Refreshing...' : 'Refresh Data'}
+          </button>
         </div>
 
         {/* Users Table */}
