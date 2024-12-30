@@ -66,12 +66,7 @@ export const metadata: Metadata = {
                 height: 512,
                 alt: 'BuildLog Logo',
             },
-            {
-                url: '/preview.png',
-                width: 1080,
-                height: 1080,
-                alt: 'BuildLog Square Preview',
-            }
+    
         ],
         locale: 'en_US',
         type: 'website',
