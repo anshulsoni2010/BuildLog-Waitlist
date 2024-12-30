@@ -58,13 +58,22 @@ export default function AdminPage() {
         body: JSON.stringify({ userId, action }),
       });
 
-      if (response.ok) {
-        toast.success(action === "verify" ? "User verified successfully" : "User removed from waitlist");
-        fetchUsers();
+      const data = await response.json();
+
+      if (!response.ok) {
+        if (response.status === 401) {
+          toast.error("Session expired. Please sign in again.");
+          signOut({ callbackUrl: "/auth/signin" });
+          return;
+        }
+        throw new Error(data.error || "Failed to perform action");
       }
+
+      toast.success(action === "verify" ? "User verified successfully" : "User removed from waitlist");
+      fetchUsers();
     } catch (error) {
       console.error("Error managing user:", error);
-      toast.error("An error occurred");
+      toast.error(error instanceof Error ? error.message : "An error occurred");
     }
   };
 
@@ -170,7 +179,7 @@ export default function AdminPage() {
           </select>
           <button
             onClick={handleRefresh}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-red-600/40 transition-colors"
             disabled={loading}
           >
             {loading ? 'Refreshing...' : 'Refresh Data'}
