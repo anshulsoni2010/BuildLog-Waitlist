@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Join BuildLog Waitlist - Organize Your Projects Effortlessly",
-    description: "Be among the first to get access to your platform!",
+    description: "Be among the first to get access to BuildLog!",
     metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
     keywords: [
         "Buidlog",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     manifest: '/manifest.json',
     openGraph: {
         title: "Join BuildLog Waitlist - Organize Your Projects Effortlessly",
-        description: "Be among the first to get access to your platform!",
+        description: "Be among the first to get access to BuildLog!",
         images: [
             {
                 url: '/preview.png',
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     other: {
         'og:image:width': '1200',
         'og:image:height': '630',
-        'pinterest:description': "Be among the first to get access to your platform!",
+        'pinterest:description': "Be among the first to get access to BuildLog!",
         'pinterest:image': '/preview.png',
         'reddit:title': 'Join BuildLog Waitlist - Stay Organize & Build Boldly!',
         'reddit:image': '/preview.png',
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: "Join BuildLog Waitlist - Organize Your Projects Effortlessly",
-        description: "Be among the first to get access to your platform!",
+        description: "Be among the first to get access to BuildLog!",
         images: ['/preview.png'],
         creator: '@AnshulSoni2010',
         site: '@AnshulSoni2010',
