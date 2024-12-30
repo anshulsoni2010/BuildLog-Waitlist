@@ -25,7 +25,7 @@ export async function sendVerificationEmail(email: string, token: string) {
           <img src="${process.env.NEXT_PUBLIC_APP_URL}/logo.png" alt="BuildLog Logo" style="width: 120px; margin-bottom: 15px;">
           <img src="${process.env.NEXT_PUBLIC_APP_URL}/preview.png" alt="BuildLog Preview" style="width: 100%; max-width: 500px; border-radius: 8px; margin-bottom: 20px;">
           <h1 style="color: #FAFAFA; margin: 0;">You are in Early Access Waitlist</h1>
-          <p style="color: #71717A; margin: 10px 0;">I'll send you updates on new features and when you can expect to get access to BuildLog. Currently, I'm working on the app and expect to be ready very soon.</p>
+          <h3 style="color: #71717A; margin: 10px 0;">Thank you for joining waitlist! I’ll keep you updated on new features and let you know when you’ll be able to access BuildLog. Right now, I'm still working on the app and expect it to be ready very soon. Your support means a lot to me, and I can't wait to share BuildLog with you. Stay tuned for something amazing!</h3>
           <div style="margin-top: 20px;">
             <p style="color: #71717A; margin: 10px 0;">Meanwhile, let's connect!</p>
             <a href="https://twitter.com/Anshulsoni2010" 
